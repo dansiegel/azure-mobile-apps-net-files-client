@@ -2,17 +2,16 @@
 
 The Microsoft Azure Mobile Apps File Management SDK simplifies file/blob management for applications using Microsoft Azure Mobile Apps. To learn more, visit the Azure [Developer Center](http://azure.microsoft.com/en-us/develop/mobile).
 
-## Note
+This library was provided by the Azure Mobile Center team following Microsoft's abandoning further development. It is being provided as a public project for further development by Dan Siegel, and is not managed by Microsoft.
 
-This library was provided by the Azure Mobile Center team following Microsoft's abandoning further development. It is being provided as a public project for further development by Dan Siegel.
+## Additional Resources
 
-### Prerequisites
-
-The SDK requires Visual Studio 2017.
-
+- [Microsoft.Azure.Mobile.Client](https://github.com/Azure/azure-mobile-apps-net-client)
+- [Contoso Moments - Sample App](https://github.com/azure-appservice-samples/ContosoMoments)
+- [AzureMobileClient.Helpers](https://github.com/dansiegel/AzureMobileClient.Helpers)
 
 ## Contribute Code or Provide Feedback
 
-If you would like to become an active contributor to this project please follow the instructions provided in [Microsoft Azure Projects Contribution Guidelines](http://azure.github.com/guidelines.html).
+Community Pull Requests are welcome and encouraged.
 
-If you encounter any bugs with the library please file an issue in the [Issues](https://github.com/dansiegel/azure-mobile-apps-net-files/issues) section of the project.
+If you encounter any bugs with the library please file an issue in the [Issues](https://github.com/dansiegel/azure-mobile-apps-net-files-client/issues) section of the project.
