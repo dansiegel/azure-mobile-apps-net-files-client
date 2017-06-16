@@ -2,18 +2,8 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // ----------------------------------------------------------------------------
 
-using Microsoft.WindowsAzure.MobileServices;
-using Microsoft.WindowsAzure.MobileServices.Sync;
-using Microsoft.WindowsAzure.Storage.Blob;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Net.Http;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices.Files.Metadata;
 
 namespace Microsoft.WindowsAzure.MobileServices.Files
