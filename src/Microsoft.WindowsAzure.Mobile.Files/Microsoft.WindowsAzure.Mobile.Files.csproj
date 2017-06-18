@@ -4,8 +4,8 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />-->
   
   <PropertyGroup>
-    <!--<TargetFramework>uap10.0</TargetFramework>-->
-    <TargetFrameworks>netstandard1.4;net45;MonoAndroid71;Xamarin.iOS10;uap10.0</TargetFrameworks>
+    <TargetFramework>Xamarin.iOS10</TargetFramework>
+    <!--<TargetFrameworks>netstandard1.4;net45;MonoAndroid71;Xamarin.iOS10;uap10.0</TargetFrameworks>-->
     <RootNamespace>Microsoft.WindowsAzure.MobileServices.Files</RootNamespace>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Dan Siegel</Authors>
@@ -20,6 +20,10 @@
     <DefaultLanguage>en-US</DefaultLanguage>-->
     <!--<SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>-->
   </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <DefineConstants>$(DefineConstants);DOTNET</DefineConstants>
+  </PropertyGroup>
   
   <PropertyGroup Condition=" '$(TargetFramework)' == 'MonoAndroid71' ">
     <TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier>
@@ -27,14 +31,14 @@
     <LanguageTargets>$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets</LanguageTargets>
     <AndroidResgenNamespace>Xamarin.Auth._MobileServices</AndroidResgenNamespace>
     <!--<MonoAndroidResourcePrefix>..\External\Xamarin.Auth\source\Xamarin.Auth.XamarinAndroid\Resources</MonoAndroidResourcePrefix>-->
-    <DefineConstants>$(DefineConstants);PLATFORM_ANDROID;XAMARIN_AUTH_INTERNAL</DefineConstants>
+    <DefineConstants>$(DefineConstants);PLATFORM_ANDROID;__ANDROID__;__MOBILE__</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'Xamarin.iOS10' ">
     <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
     <LanguageTargets>$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets</LanguageTargets>
-    <DefineConstants>$(DefineConstants);PLATFORM_IOS;XAMARIN_AUTH_INTERNAL</DefineConstants>
+    <DefineConstants>$(DefineConstants);PLATFORM_IOS;__UNIFIED__;__MOBILE__;__IOS__;XAMARINIOS1_0</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'uap10.0' ">
@@ -62,6 +66,10 @@
     <PackageReference Include="System.Net.Http" Version="4.3.2" />
     <!--<Reference Include="System.Net" />
     <Reference Include="System.Net.Http" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="../Microsoft.WindowsAzure.Mobile.Files.Shared/*.cs" />
   </ItemGroup>
 
   <!--<Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />-->
