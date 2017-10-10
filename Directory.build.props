@@ -1,0 +1,20 @@
+<Project>
+  <PropertyGroup>
+    <Authors>Dan Siegel</Authors>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <PackageProjectUrl>https://github.com/dansiegel/azure-mobile-apps-net-files-client</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dansiegel/azure-mobile-apps-net-files-client</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects> 
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)Artifacts</PackageOutputPath>
+    <PackageOutputPath Condition=" '$(BUILD_ARTIFACTSTAGINGDIRECTORY)' != '' ">$(BUILD_ARTIFACTSTAGINGDIRECTORY)</PackageOutputPath>
+    <VersionPrefix>2.0.0</VersionPrefix>
+    <IS_PREVIEW Condition=" '$(IS_PREVIEW)' == '' ">false</IS_PREVIEW>
+    <VersionPrefix Condition=" '$(BUILD_BUILDNUMBER)' != '' ">$(VersionPrefix).$(BUILD_BUILDNUMBER)</VersionPrefix>
+    <VersionSuffix Condition=" '$(BUILD_BUILDNUMBER)' != '' ">ci</VersionSuffix>
+    <VersionSuffix Condition=" '$(IS_PREVIEW)' ">pre</VersionSuffix>
+  </PropertyGroup>
+</Project>

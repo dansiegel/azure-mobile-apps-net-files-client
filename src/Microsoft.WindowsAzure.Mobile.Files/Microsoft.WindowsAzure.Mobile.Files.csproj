@@ -2,16 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.4;net45;MonoAndroid71;Xamarin.iOS10;uap10.0</TargetFrameworks>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Authors>Dan Siegel</Authors>
-    <Company />
-    <Description />
-    <Version>2.0.0</Version>
-    <PackageProjectUrl>https://github.com/dansiegel/azure-mobile-apps-net-files-client</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/dansiegel/azure-mobile-apps-net-files-client</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects> 
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <Description>This client library adds file management capabilities to client applications built with the Azure Mobile Apps SDK. For more information, check out https://www.windowsazure.com/mobile.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Sign)' == 'Sign'">
