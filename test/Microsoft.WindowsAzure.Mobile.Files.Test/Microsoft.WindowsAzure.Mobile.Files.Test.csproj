@@ -8,12 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
+    <PackageReference Include="Moq" Version="4.7.137" />
     <PackageReference Include="xunit" Version="2.3.0-rc1-build3809" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.0-rc1-build3809" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../src/Microsoft.WindowsAzure.Mobile.Files" />
+    <ProjectReference Include="../../src/Microsoft.WindowsAzure.Mobile.Files/Microsoft.WindowsAzure.Mobile.Files.csproj" />
   </ItemGroup>
 
   <ItemGroup>
