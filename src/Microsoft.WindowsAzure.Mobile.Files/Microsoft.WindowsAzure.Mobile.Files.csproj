@@ -1,12 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <!--<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory),Microsoft.WindowsAzure.Mobile.Build.msbuild))\tools\Microsoft.WindowsAzure.Mobile.Build.settings.targets" Condition="$(CmdLine) != ''" />
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />-->
-  
   <PropertyGroup>
-    <!-- <TargetFramework>net45</TargetFramework> -->
     <TargetFrameworks>netstandard1.4;net45;MonoAndroid71;Xamarin.iOS10;uap10.0</TargetFrameworks>
-    <RootNamespace>Microsoft.WindowsAzure.MobileServices.Files</RootNamespace>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Dan Siegel</Authors>
     <Company />
@@ -16,10 +11,14 @@
     <RepositoryUrl>https://github.com/dansiegel/azure-mobile-apps-net-files-client</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects> 
-    <!--<RootNamespace>Microsoft.WindowsAzure.MobileServices.Files</RootNamespace>
-    <AssemblyName>Microsoft.WindowsAzure.Mobile.Files</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>-->
-    <!--<SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>-->
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Sign)' == 'Sign'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>true</DelaySign>
+    <AssemblyOriginatorKeyFile>"$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory)\35MSSharedLib1024.snk</AssemblyOriginatorKeyFile>
+    <DefineConstants>$(DefineConstants);Sign;</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
