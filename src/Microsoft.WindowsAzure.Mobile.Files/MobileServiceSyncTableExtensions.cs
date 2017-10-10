@@ -1,13 +1,9 @@
-﻿// ---------------------------------------------------------------------------- 
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// ----------------------------------------------------------------------------
-
-using IO = System.IO;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.WindowsAzure.Mobile.Files.IO;
 using Microsoft.WindowsAzure.MobileServices.Files.Metadata;
 using Microsoft.WindowsAzure.MobileServices.Files.Sync;
 using Microsoft.WindowsAzure.MobileServices.Sync;
+using IO = System.IO;
 // Foo
 namespace Microsoft.WindowsAzure.MobileServices.Files
 {

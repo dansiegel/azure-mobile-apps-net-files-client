@@ -1,12 +1,5 @@
-﻿// ---------------------------------------------------------------------------- 
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// ----------------------------------------------------------------------------
-
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 #if WIN_APPS
 using Windows.Storage;

@@ -1,13 +1,6 @@
-﻿// ---------------------------------------------------------------------------- 
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// ----------------------------------------------------------------------------
-
-using System;
-using System.Collections.Generic;
-using IO = System.IO;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.WindowsAzure.Mobile.Files.IO;
+using IO = System.IO;
 
 namespace Microsoft.WindowsAzure.MobileServices.Files.Sync
 {

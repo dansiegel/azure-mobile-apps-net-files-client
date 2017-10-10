@@ -1,20 +1,9 @@
-﻿// ---------------------------------------------------------------------------- 
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// ----------------------------------------------------------------------------
-
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
-using Microsoft.WindowsAzure.MobileServices.Files;
-using Microsoft.WindowsAzure.MobileServices.Files.Metadata;
-using Microsoft.WindowsAzure.MobileServices.Files.Sync;
-using Microsoft.WindowsAzure.MobileServices;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Blob;
 using Microsoft.WindowsAzure.MobileServices.Files.Identity;
+using Microsoft.WindowsAzure.MobileServices.Files.Metadata;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace Microsoft.WindowsAzure.MobileServices.Files.StorageProviders
 {
