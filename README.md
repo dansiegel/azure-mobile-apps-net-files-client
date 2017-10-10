@@ -4,6 +4,8 @@ The Microsoft Azure Mobile Apps File Management SDK simplifies file/blob managem
 
 This library was provided by the Azure Mobile Center team following Microsoft's abandoning further development. It is being provided as a public project for further development by Dan Siegel, and is not managed by Microsoft.
 
+[![https://avantipoint.visualstudio.com/_apis/public/build/definitions/4a1b3bb8-c232-4e6e-8668-72cd0f58e665/33/badge]]()
+
 ## Additional Resources
 
 - [Microsoft.Azure.Mobile.Client](https://github.com/Azure/azure-mobile-apps-net-client)
