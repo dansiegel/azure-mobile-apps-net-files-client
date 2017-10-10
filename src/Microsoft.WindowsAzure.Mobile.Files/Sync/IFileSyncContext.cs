@@ -1,12 +1,4 @@
-﻿// ---------------------------------------------------------------------------- 
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// ----------------------------------------------------------------------------
-
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices.Files.Metadata;
 using Microsoft.WindowsAzure.MobileServices.Files.Operations;

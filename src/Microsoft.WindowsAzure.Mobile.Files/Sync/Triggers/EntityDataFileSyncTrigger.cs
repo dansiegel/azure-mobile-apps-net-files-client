@@ -1,8 +1,4 @@
-﻿// ---------------------------------------------------------------------------- 
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// ----------------------------------------------------------------------------
-
-using System;
+﻿using System;
 using Microsoft.WindowsAzure.MobileServices.Files.Eventing;
 using Microsoft.WindowsAzure.MobileServices.Sync;
 using Newtonsoft.Json.Linq;

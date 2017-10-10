@@ -1,8 +1,4 @@
-﻿// ---------------------------------------------------------------------------- 
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// ----------------------------------------------------------------------------
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -35,6 +31,51 @@ namespace Microsoft.WindowsAzure.MobileServices.Files
 
                 return filesClient;
             }
+        }
+
+        /// <summary>
+        /// Uploads a <paramref name="file"/> from a local file specified in the <paramref name="filePath"/>
+        /// </summary>
+        /// <typeparam name="T">The type of the instances in the table.</typeparam>
+        /// <param name="table">The table instance that contains the record associated with the <see cref="MobileServiceFile"/>.</param>
+        /// <param name="file">The <see cref="MobileServiceFile"/> instance.</param>
+        /// <param name="filePath">The path of the file to be uploaded.</param>
+        /// <returns>A <see cref="Task"/> that completes when the upload has finished.</returns>
+        public async static Task UploadFileAsync<T>(this IMobileServiceTable<T> table, MobileServiceFile file, string filePath)
+        {
+            IMobileServiceFileDataSource dataSource = new PathMobileServiceFileDataSource(filePath);
+
+            await table.UploadFileAsync(file, dataSource);
+        }
+
+        /// <summary>
+        /// Downloads a <paramref name="file"/> and saves it to the local device using the provided <paramref name="targetPath"/>.
+        /// </summary>
+        /// <typeparam name="T">The type of the instances in the table.</typeparam>
+        /// <param name="table">The table instance that contains the record associated with the <see cref="MobileServiceFile"/>.</param>
+        /// <param name="file">The <see cref="MobileServiceFile"/> instance representing the file to be downloaded.</param>
+        /// <param name="targetPath">The path that will be used to save the downloaded file.</param>
+        /// <returns>A <see cref="Task"/> that completes when the download has finished.</returns>
+        public async static Task DownloadFileAsync<T>(this IMobileServiceTable<T> table, MobileServiceFile file, string targetPath)
+        {
+            using (Stream stream = await Mobile.Files.IO.File.CreateAsync(targetPath))
+            {
+                await table.DownloadFileToStreamAsync(file, stream);
+            }
+        }
+
+        internal static string GetDataItemId(object dataItem)
+        {
+            // TODO: This needs to use the same logic used by the client SDK
+            var objectType = dataItem.GetType().GetTypeInfo();
+            var idProperty = objectType.GetDeclaredProperty("Id");
+
+            if (idProperty != null && idProperty.CanRead)
+            {
+                return idProperty.GetValue(dataItem) as string;
+            }
+
+            return null;
         }
 
         public async static Task<IEnumerable<MobileServiceFile>> GetFilesAsync<T>(this IMobileServiceTable<T> table, T dataItem)
@@ -122,20 +163,6 @@ namespace Microsoft.WindowsAzure.MobileServices.Files
 
             IMobileServiceFilesClient filesClient = GetFilesClient(client);
             await filesClient.UploadFileAsync(metadata, dataSource);
-        }
-
-        private static string GetDataItemId(object dataItem)
-        {
-            // TODO: This needs to use the same logic used by the client SDK
-            var objectType = dataItem.GetType().GetTypeInfo();
-            var idProperty = objectType.GetDeclaredProperty("Id");
-
-            if (idProperty != null && idProperty.CanRead)
-            {
-                return idProperty.GetValue(dataItem) as string;
-            }
-
-            return null;
         }
     }
 }
