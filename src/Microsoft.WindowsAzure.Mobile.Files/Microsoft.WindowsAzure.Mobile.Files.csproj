@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard1.4;net45;MonoAndroid71;Xamarin.iOS10;uap10.0</TargetFrameworks>
     <Description>This client library adds file management capabilities to client applications built with the Azure Mobile Apps SDK. For more information, check out https://www.windowsazure.com/mobile.</Description>
+    <PackageTags>microsoft;windows;azure;mobile;apps;offline;sync;files</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Sign)' == 'Sign'">
