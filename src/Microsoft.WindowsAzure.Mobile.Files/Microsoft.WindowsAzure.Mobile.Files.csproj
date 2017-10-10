@@ -9,7 +9,7 @@
   <PropertyGroup Condition="'$(Sign)' == 'Sign'">
     <SignAssembly>true</SignAssembly>
     <DelaySign>true</DelaySign>
-    <AssemblyOriginatorKeyFile>"$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory)\35MSSharedLib1024.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory))\35MSSharedLib1024.snk</AssemblyOriginatorKeyFile>
     <DefineConstants>$(DefineConstants);Sign;</DefineConstants>
   </PropertyGroup>
 
