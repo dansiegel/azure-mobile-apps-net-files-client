@@ -8,7 +8,7 @@ using Microsoft.WindowsAzure.Mobile.Files.IO;
 using Microsoft.WindowsAzure.MobileServices.Files.Metadata;
 using Microsoft.WindowsAzure.MobileServices.Files.Sync;
 using Microsoft.WindowsAzure.MobileServices.Sync;
-
+// Foo
 namespace Microsoft.WindowsAzure.MobileServices.Files
 {
     public static class MobileServiceSyncTableExtensions
