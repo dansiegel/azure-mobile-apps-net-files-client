@@ -11,7 +11,7 @@
     <RepositoryUrl>https://github.com/dansiegel/azure-mobile-apps-net-files-client</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects> 
-    <DefaultLanguage>en-US</DefaultLanguage>-->
+    <DefaultLanguage>en-US</DefaultLanguage>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Sign)' == 'Sign'">
