@@ -26,8 +26,8 @@ Community Pull Requests are welcome and encouraged.
 
 If you encounter any bugs with the library please file an issue in the [Issues](https://github.com/dansiegel/azure-mobile-apps-net-files-client/issues) section of the project.
 
-[FileClientNuGet]: https://www.nuget.org/packages/Microsoft.WindowsAzure.Mobile.Files
-[FileClientNuGetShield]: https://img.shields.io/nuget/vpre/Microsoft.WindowsAzure.Mobile.Files.svg
-[FileClientMyGet]: https://www.myget.org/feed/azurefileclient/package/nuget/Microsoft.WindowsAzure.Mobile.Files
-[FileClientMyGetShield]: https://img.shields.io/myget/azurefileclient/vpre/Microsoft.WindowsAzure.Mobile.Files.svg
+[FileClientNuGet]: https://www.nuget.org/packages/MicrosoftAzure.Mobile.Files.Client
+[FileClientNuGetShield]: https://img.shields.io/nuget/vpre/MicrosoftAzure.Mobile.Files.Client.svg
+[FileClientMyGet]: https://www.myget.org/feed/azurefileclient/package/nuget/MicrosoftAzure.Mobile.Files.Client
+[FileClientMyGetShield]: https://img.shields.io/myget/azurefileclient/vpre/MicrosoftAzure.Mobile.Files.Client.svg
 [buildStatus]: https://avantipoint.visualstudio.com/_apis/public/build/definitions/4a1b3bb8-c232-4e6e-8668-72cd0f58e665/33/badge
